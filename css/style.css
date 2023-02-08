@@ -105,6 +105,12 @@
     margin-left: 8px;
 }
 
+@media (max-width: 1200px) {
+    .bg-primary .add {
+        display: none;
+    }
+}
+
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
