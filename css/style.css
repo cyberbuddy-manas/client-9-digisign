@@ -18,6 +18,88 @@
     font-weight: 500;
 }
 
+/*--------------------------------------------------------------
+# Snackbar
+--------------------------------------------------------------*/
+
+div#snackBox {
+    display: flex;
+    width: 100%;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    left: 0;
+}
+
+#snackbar {
+    display: none;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    display: unset;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3.5s;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
 
 /*** Spinner ***/
 #spinner {
@@ -112,7 +194,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -151,7 +233,7 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .7);
     z-index: 1;
 }
 
@@ -174,7 +256,7 @@
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -602,6 +684,7 @@
 .copyright a:hover {
     color: var(--primary) !important;
 }
+
 .back-to-top {
     position: fixed;
     display: none;

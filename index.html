@@ -136,8 +136,8 @@
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-lg-7 text-start">
-                                    <p class="fs-4 text-white animated slideInRight">Welcome to <strong>Official
-                                            DigiSign</strong></p>
+                                    <p class="fs-4 text-white animated slideInRight">Welcome to Official
+                                            DigiSign</p>
                                     <h1 class="display-1 text-white mb-4 animated slideInRight">Trusted digital
                                         signature provider in Amritsar</h1>
                                     <a href="about.html"
@@ -154,8 +154,8 @@
                         <div class="container">
                             <div class="row justify-content-end">
                                 <div class="col-lg-7 text-end">
-                                    <p class="fs-4 text-white animated slideInLeft">Quick Approval of <strong>Digital
-                                            Signatures</strong></p>
+                                    <p class="fs-4 text-white animated slideInLeft">Quick Approval of Digital
+                                            Signatures</p>
                                     <h1 class="display-1 text-white mb-5 animated slideInLeft">Secure your digital world
                                         with our digital signatures</h1>
                                     <a href="contact.html"
@@ -535,18 +535,18 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="service">
-                                        <option selected>10am-11pm</option>
-                                        <option value="">11am-12pm</option>
-                                        <option value="">12pm-01pm</option>
-                                        <option value="">01pm-02pm</option>
-                                        <option value="">02pm-03pm</option>
-                                        <option value="">03pm-04pm</option>
-                                        <option value="">04pm-05pm</option>
-                                        <option value="">05pm-06pm</option>
-                                        <option value="">06pm-07pm</option>
+                                    <select class="form-select" id="time">
+                                        <option selected value="10 AM - 11 PM">10 AM - 11 PM</option>
+                                        <option value="11 AM - 12 PM">11 AM - 12 PM</option>
+                                        <option value="12 PM - 01 PM">12 PM - 01 PM</option>
+                                        <option value="01 PM - 02 PM">01 PM - 02 PM</option>
+                                        <option value="02 PM - 03 PM">02 PM - 03 PM</option>
+                                        <option value="03 PM - 04 PM">03 PM - 04 PM</option>
+                                        <option value="04 PM - 05 PM">04 PM - 05 PM</option>
+                                        <option value="05 PM - 06 PM">05 PM - 06 PM</option>
+                                        <option value="06 PM - 07 PM">06 PM - 07 PM</option>
                                     </select>
-                                    <label for="service">Choose Your Time Slot</label>
+                                    <label for="time">Choose Your Time Slot</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -557,7 +557,7 @@
                                 </div>
                             </div>
                             <div class="col-12 text-center">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit" onclick="bookCall()">Submit Now</button>
                             </div>
                         </div>
                     </div>
@@ -784,6 +784,9 @@
     </div>
     <!-- Copyright End -->
 
+    <div id="snackBox">
+        <div id="snackbar"></div>
+    </div>
 
     <!-- Back to Top -->
     <!-- <a href="#about" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a> -->
@@ -799,6 +802,15 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Email JS -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("X9A4oWlWq599cq-0e");
+            })();
+        </script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>

@@ -148,7 +148,7 @@
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <form>
+                    <form onsubmit="return false">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -176,7 +176,8 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send
+                                <button class="btn btn-primary rounded-pill py-3 px-5" onclick="contactUs()"
+                                    type="submit">Send
                                     Message</button>
                             </div>
                         </div>
@@ -294,6 +295,19 @@
         </div>
     </div>
     <!-- Copyright End -->
+
+    <div id="snackBox">
+        <div id="snackbar"></div>
+    </div>
+
+    <!-- Email JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("X9A4oWlWq599cq-0e");
+        })();
+    </script>
 
 
     <!-- Back to Top -->
