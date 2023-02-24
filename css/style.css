@@ -233,7 +233,7 @@ div#snackBox {
     bottom: 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .4);
     z-index: 1;
 }
 
